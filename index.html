@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio | Nanang Maulana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/tailwind.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              light: '#2563eb', // blue-600 light
+              dark: '#3b82f6', // blue-500 dark
+            },
+            secondary: {
+              light: '#1e40af', // blue-800 light
+              dark: '#1d4ed8', // blue-700 dark
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="img/logo Ku2.jpg" type="image/x-icon">
+  <style>
+    /* Custom styles that are difficult to achieve with Tailwind */
+    #imageModal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      max-height: 80vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="fixed bottom-8 left-8 bg-blue-600 dark:bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer z-50 shadow-lg">
+    <i id="themeIcon" class="fas fa-moon text-white"></i>
+  </button>
+
+  <!-- Tombol Scroll to Top -->
+  <div class="fixed bottom-8 right-8 bg-blue-600 dark:bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center cursor-pointer opacity-0 transition-opacity duration-300 z-50 shadow-lg" id="scrollToTop">
+    <i class="fas fa-arrow-up text-white"></i>
+  </div>
+
+  <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-40 transition-colors duration-300">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center items-center py-4">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-primary-light dark:hover:text-primary-dark transition">Home</a></li>
+          <li><a href="#about" class="hover:text-primary-light dark:hover:text-primary-dark transition">About</a></li>
+          <li><a href="#project" class="hover:text-primary-light dark:hover:text-primary-dark transition">Project</a></li>
+          <li><a href="#contact" class="hover:text-primary-light dark:hover:text-primary-dark transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<header class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
+  <div class="w-full"> <!-- Container luar full width -->
+    <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between">
+      <!-- Konten tetap sama -->
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Hello I'm</h1>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-primary-light dark:text-primary-dark">Nanang Maulana</h1>
+        <p class="text-xl mb-8 text-gray-600 dark:text-gray-300">IT Engineer|Web Developer|Design UI/UX|Desain grafis|AI Specialist</p>
+        <div class="flex space-x-4">
+          <a href="https://www.linkedin.com/in/nanang-maulana-bb38a830a/" target="_blank" rel="noopener noreferrer" class="bg-primary-light dark:bg-primary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark text-white px-6 py-3 rounded-lg flex items-center transition">
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+          </a>
+          <a href="CV_Nanang_Maulana.pdf" download="CV_Nanang_Maulana.pdf" target="_blank" class="bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg flex items-center transition">
+            <i class="fas fa-download mr-2"></i> Download CV
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="img/ppku.png" alt="Nanang Maulana" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white dark:border-gray-300 shadow-xl">
+      </div>
+    </div>
+  </div>
+</header>
+
+  <section id="about" class="py-16 px-4">
+    <div class="container mx-auto">
+      <section class="flex flex-col md:flex-row items-center mb-16">
+        <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+          <img src="img/Profile.png" alt="Nanang Maulana" class="rounded-lg w-full max-w-md shadow-lg">
+        </div>
+        <div class="md:w-2/3 md:pl-12">
+          <h2 class="text-3xl font-bold mb-6 text-primary-light dark:text-primary-dark">Why You Hire Me?</h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">Mengapa saya layak dipilih? Saya memiliki pengalaman mendalam, dalam pengembangan dunia IT modern. Baik dalam pembuatan/pengembangan sebuah Aplikasi atau sistem.</p>
+          <p class="mb-8 text-gray-700 dark:text-gray-300">Saya selalu mengutamakan inovasi, efisiensi, dan desain yang user-friendly untuk mendukung visi perusahaan.</p>
+          <h2 class="text-2xl font-bold mb-4 text-primary-light dark:text-primary-dark">Pendidikan Terakhir</h2>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">S1 Teknik Informatika</p>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">Universitas Indraprasta PGRI (UNINDRA) | Jakarta</p>
+          <p class="mb-2 text-gray-700 dark:text-gray-300">Pondok Pesantren & SMK Al Fauzan Nusantara | Jakarta</p>
+          <p class="mb-6 text-gray-700 dark:text-gray-300">Jurusan: Rekayasa Perangkat Lunak (RPL)</p>
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Nanang Maulana</h3>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+          <i class="fas fa-laptop-code fa-2x text-primary-light dark:text-primary-dark mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Design UI/UX</h4>
+          <p class="text-gray-600 dark:text-gray-400">Membuat tampilan aplikasi yang moderen</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+          <i class="fas fa-desktop-alt fa-2x text-primary-light dark:text-primary-dark mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">App Desktop</h4>
+          <p class="text-gray-600 dark:text-gray-400">Aplikasi desktop modern & responsif.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+          <i class="fas fa-globe fa-2x text-primary-light dark:text-primary-dark mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">App Website</h4>
+          <p class="text-gray-600 dark:text-gray-400">Aplikasi berbasis web interaktif & dinamis.</p>
+        </div>
+      </section>
+    </div>
+  </section>
+  
+  <section id="project" class="py-16 px-4 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto">
+      <section>
+        <div class="mb-12">
+          <div class="mb-8">
+            <h2 class="text-4xl font-bold mb-8 text-primary-light dark:text-primary-dark border-b-2 pb-2 border-blue-200">My Project</h2>
+            <p class="text-gray-700 dark:text-gray-300 max-w-3xl">Berikut proyek yang pernah saya buat. Di sini Anda akan menemukan kreativitas dan bakat saya dalam merancang dan membuat sebuah proyek.</p>
+          </div>
+          <div class="flex space-x-4">
+          <div class="mb-12">
+            <a href="https://github.com/nanang392" target="_blank" rel="noopener noreferrer" class="bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg flex items-center transition inline-block">
+              <i class="fab fa-github mr-2"></i> GitHub
+            </a>
+          </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Project 1 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/apksaw.png')">
+              <img src="img/apksaw.png" alt="App Design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">Aplikasi SPK Pemilihan Siswa Berprestasi Metode SAW di SMK</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Aplikasi untuk pemilihan siswa berprestasi metode SAW dengan menggunakan java neatbints yang terhubung kedalam database pada MySQL</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">App Desktop</span>
+              </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/dashboard.png')">
+              <img src="img/dashboard.png" alt="Architecture Design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">App Sistem Informasi Pondok Pesantren (SIPONPES)</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Aplikasi Sistem Informasi Pondok Pesantren dengan menggunakan java neatbints yang terhubung kedalam database pada MySQL</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">App Desktop</span>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/IG.png')">
+              <img src="img/IG.png" alt="Restaurant App" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">Admin & Desain grafis instagram PonPes</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Mengelola dan membuat desain grafis menarik (feed, poster, infografis, dan konten edukasi Islami) menggunakan tools seperti Canva, Photoshop</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Desain grafis</span>
+              </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/webskl.png')">
+              <img src="img/webskl.png" alt="App Design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">App Design UI/UX Web Pondok Pesantren</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Membuat tampilan website untuk pondok pesantren dengan HTML & CSS yang responsif dan menarik dengan antarmuka yang user-friendly</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Web Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- sertifikat -->
+      <section class="mt-20">
+        <div class="mb-12">
+          <div class="mb-8">
+            <h2 class="text-4xl font-bold mb-8 text-primary-light dark:text-primary-dark border-b-2 pb-2 border-blue-200">My Sertifikat</h2>
+            <p class="text-gray-700 dark:text-gray-300 max-w-3xl">Berikut Sertifikat yang pernah saya ikuti. Di sini Anda akan menemukan keseriusan saya dalam menyelesaikan sebuah program.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- sertifikat 1 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/sertifikat.png')">
+              <img src="img/sertifikat.png" alt="App Design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">Memulai Pemrograman Dengan C</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Program yang diadakan oleh Dicoding Indonesia</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Dicoding</span>
+              </div>
+            </div>
+            <!-- sertifikat 2 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/Sertifikat 2.png')">
+              <img src="img/Sertifikat 2.png" alt="Architecture Design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">Pengantar Mindset Digital</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Program yang diadakan oleh Digital Talent Scholarship</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Komdigi</span>
+              </div>
+            </div>
+            <!-- sertifikat 3 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/sertifikat 3.png')">
+              <img src="img/sertifikat 3.png" alt="Restaurant App" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">Code Generation and Optimization Using IBM Granite</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Program yang diadakan oleh Hacktiv8 & IBM</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Hacktiv8</span>
+              </div>
+            </div>
+            <!-- sertifikat 4 -->
+            <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer" onclick="openModal('img/sertivikat 4.png')">
+              <img src="img/sertivikat 4.png" alt="App Design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 dark:text-white">Generative AI untuk Pendidikan</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">Program yang diadakan oleh Digital Talent Scholarship</p>
+                <span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Komdigi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <!-- Modal untuk menampilkan gambar -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <section id="contact" class="py-16 px-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
+    <div class="container mx-auto">
+      <p class="text-center text-3xl font-bold mb-16 text-primary-light dark:text-primary-dark">Contact Us</p>
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+          <i class="fas fa-envelope fa-2x text-primary-light dark:text-primary-dark mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Email</h4>
+          <p class="text-gray-600 dark:text-gray-400 mb-2">Hubungi saya melalui.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-300">nanangmaulana392@gmail.com</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+          <i class="fab fa-whatsapp fa-2x text-primary-light dark:text-primary-dark mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">WhatsApp</h4>
+          <p class="text-gray-600 dark:text-gray-400 mb-2">Hubungi saya via WA.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-300">+6289501343925</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+          <i class="fas fa-map-marker-alt fa-2x text-primary-light dark:text-primary-dark mb-4"></i>
+          <h4 class="text-xl font-bold mb-2">Alamat</h4>
+          <p class="text-gray-600 dark:text-gray-400 mb-2">Domisili Saya.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-300">Jakarta Selatan</p>
+        </div>
+      </section>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
