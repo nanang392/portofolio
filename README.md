@@ -47,6 +47,3 @@ Portofolio ini adalah representasi digital dari perjalanan profesional dan keter
 
 Tidak ada lisensi yang ditentukan untuk proyek ini.
 
-
----
-README.md ini dihasilkan secara otomatis oleh [README.MD Generator](https://github.com/emRival) — dibuat dengan ❤️ oleh [emRival](https://github.com/emRival)
