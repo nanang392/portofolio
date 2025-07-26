@@ -42,8 +42,3 @@ Portofolio ini adalah representasi digital dari perjalanan profesional dan keter
 3.  Commit perubahan Anda: `git commit -m 'Tambahkan fitur baru'`
 4.  Push ke branch Anda: `git push origin feature/nama-fitur`
 5.  Buat Pull Request.
-
-## Lisensi 📄
-
-Tidak ada lisensi yang ditentukan untuk proyek ini.
-
